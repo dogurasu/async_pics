@@ -2,6 +2,7 @@ import React from 'react';
 // import axios from 'axios';
 import unsplash from '../api/unsplash';
 import SearchBar from './SearchBar';
+import ImageList from './ImageList';
 require('dotenv').config();
 
 class App extends React.Component {
@@ -47,7 +48,8 @@ class App extends React.Component {
             <div className="ui container" style={{marginTop: "1rem"}}>
                 <h1>Async_Pics</h1>
                 <SearchBar onSubmit={this.onSearchSubmit}/>
-                <h2>Found {this.state.images.length} images</h2>
+                <ImageList images={this.state.images}/>
+                {/* <h2>Found {this.state.images.length} images</h2> */}
             </div>
         );
     }
