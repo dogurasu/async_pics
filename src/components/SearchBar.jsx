@@ -38,7 +38,8 @@ class SearchBar extends React.Component {
     // another way to fix the TypeError: Cannot read property 'state' of undefined
     onFormSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state.term);
+        // console.log(this.state.term);
+        this.props.onSubmit(this.state.term);
     }
 
     render() {
